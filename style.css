@@ -9,24 +9,25 @@ body {
   width: 100%;
   font-family: 'Helvetica Neue', sans-serif;
   color: #eee;
-  background: #252525;
+  background: #93aac5;
 }
 
 .container {
   width: 85vw;
   padding: 1rem;
-  margin: 2rem auto;
+  margin: 3rem auto;
   color: #252525;
   background: #eee;
+  border-radius: 15px;
 
 }
-.container h1#title {
-  font-size: 2.5rem;
+.container h2#title {
+  font-size: 1.5rem;
   text-transform: capitalize;
   text-align: center;
   margin: 1rem;
 }
-.container h1#title::selection {
+.container h2#title::selection {
   color: #eee;
   background: #252525;
 }
