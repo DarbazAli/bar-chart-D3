@@ -53,3 +53,15 @@ const parseTime = d3
 
 const formatTime = d3.timeFormat("%Y-%m-%d");
 
+
+
+
+const URL = "https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/master/GDP-data.json";
+
+fetch( URL )
+.then( res => res.json())
+.then( json => {
+    const data  = json["data"];
+    // console.log(data);
+    
+})
