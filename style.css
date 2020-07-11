@@ -21,7 +21,7 @@ body {
   margin: 2rem auto;
   color: #252525;
   background: #eee;
-  box-shadow: 6px 8px 0 #252525, 14px 14px 0 #eee;
+  /* box-shadow: 6px 8px 0 #252525, 14px 14px 0 #eee; */
   /* include a simple animation which introduces the card from the bottom of the screen */
   animation: introduceCard 1s cubic-bezier(.22,-0.3,.68,1.44) both;
 
