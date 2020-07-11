@@ -48,19 +48,19 @@ body {
 }
 /* change the opacity of the fill on hover */
 .container svg .bar {
-  fill: rgba(37, 37, 37, 0.7);
+  fill: rgba(22, 115, 221, 0.7);
 }
 .container svg .bar:hover {
-  fill: rgba(37, 37, 37, 1);
+  fill: rgba(22, 115, 221, 1);
 }
 .container div#tooltip {
   /* absolute position the div used as tooltip, to change the left and bottom properties as the cursor hovers on the SVG rectangles */
   position: absolute;
   border-radius: 4px;
   color: #eee;
-  background: #252525;
+  background: rgba(190, 118, 69, 0.8);
   padding: 1rem 2rem;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: bold;
   /* pointer events to avoid hovering on the tooltip and preventing the hover state on the rectangle elements behind it */
   pointer-events: none;

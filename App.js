@@ -110,8 +110,8 @@ function drawBarChart(data) {
 
                 .style("opacity", 1)
 
-                .style("left", `${d3.event.layerX - 150}px`)
-                .style("top", `${d3.event.layerY - 80}px`)
+                .style("left", `${d3.event.layerX - 100}px`)
+                .style("top", `${d3.event.layerY - 40}px`)
 
                 .attr("data-date", formatTime(d[0]))
                 .text(() => {
@@ -119,7 +119,7 @@ function drawBarChart(data) {
                     let year = d[0].getFullYear();
                     let quarter = (d[0].getMonth() == 0) ? "Q1" : (d[0].getMonth() == 3) ? "Q2" : (d[0].getMonth() == 6) ? "Q3" : "Q4";
 
-                    return `${year} ${quarter} ${d[1]}`;
+                    return `${year} ${quarter} $${d[1]} Billion`;
                 });
         })
         .on("mouseout", () => {
