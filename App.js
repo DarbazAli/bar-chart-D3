@@ -19,18 +19,18 @@ const margin = {
 }
 
 
-const width = 800 - margin.left - margin.right,
-        height = 400 - margin.top - margin.bottom;
+const width = 800 - margin.left - margin.right;
+const height = 400 - margin.top - margin.bottom;
 
 
-const containerCanvas = container
-                            .append("svg")
-                            .attr("viewBox", `0 0 ${width + margin.left + margin.right}  ${height + margin.top + margin.bottom}`);
+const canvas = container
+                .append("svg")
+                .attr("viewBox", `0 0 ${width + margin.left + margin.right}  ${height + margin.top + margin.bottom}`);
 
 
-const canvasContents = containerCanvas
-                            .append("g")
-                            .attr("transform", `translate(${margin.left}, ${margin.top})`);
+const svgGroups = canvas
+                .append("g")
+                .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
 // SCALES
 const xScale = d3
@@ -104,13 +104,13 @@ function drawBarChart(data) {
                     .axisLeft(yScale);
 
 
-    canvasContents
+    svgGroups
         .append("g")
         .attr("id", "x-axis")
         .attr("transform", `translate(0, ${height})`)
         .call(xAxis);
 
-    canvasContents
+    svgGroups
         .append("g")
         .attr("id", "y-axis")
         .call(yAxis);
@@ -121,7 +121,7 @@ function drawBarChart(data) {
                         .attr("id", "tooltip");
 
     // PLOT CHART
-    canvasContents
+    svgGroups
         .selectAll("rect")
         .data(data)
         .enter()
